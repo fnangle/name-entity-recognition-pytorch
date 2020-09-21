@@ -24,7 +24,7 @@ we O O
 ```
 cmd:
 
-`perl conlleval.pl <test_conlleval.txt >res`
+`perl conlleval.pl <test_conlleval.txt >result`
 
 result:
 ```
