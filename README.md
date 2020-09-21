@@ -14,11 +14,17 @@ or https://www.clips.uantwerpen.be/conll2000/chunking/
 
 `
 North B-MISC B-MISC
+
 African E-MISC B-MISC
+
 we O O
+
 Grand B-MISC I-MISC
+
 Prix E-MISC E-MISC
+
 we O O
+
 `
 
 `conlleval.pl < dataset.txt`
