@@ -24,7 +24,6 @@ Grand B-MISC I-MISC
 Prix E-MISC E-MISC
 
 we O O
-
 `
 
 `conlleval.pl < dataset.txt`
