@@ -6,8 +6,6 @@ NER nlp task with pytorch
 
 CoNLL-2003 dataset and perl Script comes from https://www.clips.uantwerpen.be/conll2003/ner/ 
 
-or https://www.clips.uantwerpen.be/conll2000/chunking/
-
 如果官方链接挂了，conlleval.pl 见 https://www.clips.uantwerpen.be/conll2000/chunking/conlleval.txt
 
 待评测的数据要注意格式：
