@@ -9,6 +9,9 @@ CoNLL-2003 dataset and perl Script comes from https://www.clips.uantwerpen.be/co
 如果官方链接挂了，conlleval.pl 见 https://www.clips.uantwerpen.be/conll2000/chunking/conlleval.txt
 
 待评测的数据要注意格式：
+
+> The file conlleval.perl is a Perl program to evaluate the output of sequence labelers producing the B-I-O format. The output of the automatic tagger should be added as a separate column, after the gold-standard annotation.
+  
   列和列之间必须为空格（ASCII为20H），只能有一个空格；行之间为换行符\n（ASCII为0AH),
 不是回车换行符\r\n（ASCII为0D0AH). 
   注意使用的是BIO标注法，而不是BIOES标注法。如果你模型的输出是BIOES标注的，需要把E(end)转化为I，S(single)转化为B。
@@ -16,7 +19,7 @@ CoNLL-2003 dataset and perl Script comes from https://www.clips.uantwerpen.be/co
 
 ### 测试一下 conlleval.pl 脚本:
 
-test_conlleval.txt:
+test_conlleval.txt （最后一列是预测的结果，在golden值的后一列）:
 
 ```  
 North B-MISC B-MISC
