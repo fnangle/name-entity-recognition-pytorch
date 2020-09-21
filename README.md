@@ -10,7 +10,9 @@ or https://www.clips.uantwerpen.be/conll2000/chunking/
 
 如果官方链接挂了，conlleval.pl 见 https://www.clips.uantwerpen.be/conll2000/chunking/conlleval.txt
 
-测试一下 conlleval.pl 脚本:
+### 测试一下 conlleval.pl 脚本:
+
+test_conlleval.txt:
 
 ```  
 North B-MISC B-MISC  
@@ -25,5 +27,6 @@ Prix E-MISC E-MISC
 
 we O O
 ```
+cmd:
 
-`conlleval.pl < dataset.txt`
+`perl conlleval.pl <test_conlleval.txt >res`
