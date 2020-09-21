@@ -21,14 +21,14 @@ we O O
 Grand B-MISC I-MISC
 Prix E-MISC E-MISC
 we O O
-
 ```
 cmd:
 
 `perl conlleval.pl <test_conlleval.txt >res`
 
 result:
-
+```
 processed 6 tokens with 2 phrases; found: 3 phrases; correct: 1.
 accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
              MISC: precision:  33.33%; recall:  50.00%; FB1:  40.00  3
+```
