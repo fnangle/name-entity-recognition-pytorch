@@ -10,8 +10,11 @@ or https://www.clips.uantwerpen.be/conll2000/chunking/
 
 如果官方链接挂了，conlleval.pl 见 https://www.clips.uantwerpen.be/conll2000/chunking/conlleval.txt
 
-待评测的数据要注意格式：列和列之间必须为空格（ASCII为20H），只能有一个空格；行之间为换行符\n（ASCII为0AH),
-不是回车换行符\r\n（ASCII为0D0AH)
+待评测的数据要注意格式：
+  列和列之间必须为空格（ASCII为20H），只能有一个空格；行之间为换行符\n（ASCII为0AH),
+不是回车换行符\r\n（ASCII为0D0AH). 
+  注意使用的是BIO标注法，而不是BIOES标注法。如果你模型的输出是BIOES标注的，需要把E(end)转化为I，S(single)转化为B。
+
 
 ### 测试一下 conlleval.pl 脚本:
 
