@@ -3,7 +3,7 @@ import torch
 import Bert_ner
 from transformers import BertForTokenClassification
 if __name__=="__main__":
-    params_dir='model/bert_base_model_beta2.pkl'
+    params_dir='model/bert_base_model_beta.pkl'
     path='/data/yanghan/Bert_related/bert_base_uncased/'
 
     model=BertForTokenClassification.from_pretrained(path,num_labels=9)
