@@ -39,3 +39,8 @@ processed 6 tokens with 2 phrases; found: 3 phrases; correct: 1.
 accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
              MISC: precision:  33.33%; recall:  50.00%; FB1:  40.00  3
 ```
+
+# results
+|model|F1 score|description|
+|:-:|:-:|:-:|
+|Bert|65.77|epoch=5，batchsize=64,AdamW ,lr=5e-5|
