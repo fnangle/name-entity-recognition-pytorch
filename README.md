@@ -3,6 +3,8 @@ NER nlp task with pytorch
 用pytorch实现命名实体识别，自己的一点记录
 
 ## 数据及评测脚本
+  
+### 数据：
 
 CoNLL-2003 dataset and perl Script comes from https://www.clips.uantwerpen.be/conll2003/ner/ 
 
@@ -16,6 +18,7 @@ CoNLL-2003 dataset and perl Script comes from https://www.clips.uantwerpen.be/co
 不是回车换行符\r\n（ASCII为0D0AH). 
   注意使用的是BIO标注法，而不是BIOES标注法。如果你模型的输出是BIOES标注的，需要把E(end)转化为I，S(single)转化为B。
 
+ps:自己在处理之前给train.txt test.txt 文件末尾各加了一个空行
 
 ### 测试一下 conlleval.pl 脚本:
 
@@ -40,7 +43,17 @@ accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
              MISC: precision:  33.33%; recall:  50.00%; FB1:  40.00  3
 ```
 
-# results
+## results
 |model|F1 score|description|
 |:-:|:-:|:-:|
 |Bert|65.77|epoch=5，batchsize=64,AdamW ,lr=5e-5|
+
+## models
+
+#### Bert only
+
+BertForTokenClassification：详见hugging face https://huggingface.co/transformers/model_doc/bert.html#bertfortokenclassification
+
+#### Bert+CRF
+
+（待填坑。。。）
