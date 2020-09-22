@@ -68,7 +68,7 @@ test_loader=DataLoader(test_set,
 
 device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def train_model(net,epoch=10):
+def train_model(net,epoch=5):
     avg_loss=[]
     net.train()
     net.to(device)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s:%(levelname)s: %(message)s', level=logging.INFO)
     # fn_model = fn_class()
     pre_net = BertForTokenClassification.from_pretrained(path,num_labels=9)
-    params_dir = 'model/bert_base_model_beta2.pkl'
+    params_dir = 'model/bert_base_model_beta.pkl'
 
     model = train_model(pre_net)
     torch.save(model.state_dict(), params_dir)  # 保存模型参数
