@@ -48,11 +48,11 @@ accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
 
 ## models说明
 
-#### Bert only
+### Bert only
 
 BertForTokenClassification：详见hugging face https://huggingface.co/transformers/model_doc/bert.html#bertfortokenclassification
 
-#### Bert+CRF
+### Bert+CRF
 
 （待填坑。。。）
 
@@ -73,9 +73,11 @@ CRF层可以为最后预测的标签添加一些约束来保证预测的标签�
 （待填坑）
 
 ## 文件说明
-process_data.py : 数据处理，将训练和测试文本映射到二维列表，里层是每句话。
-Bert_ner.py : 主要的程序，用来训练模型
-test_bert_ner.py : 测试，把模型预测的结果写到pred.txt ，真实值写到golden.txt，用于后续输入conlleval.pl脚本
+- process_data.py : 数据处理，将训练和测试文本映射到二维列表，里层是每句话。  
+
+- Bert_ner.py : 主要的程序，用来训练模型. 
+
+- test_bert_ner.py : 测试，把模型预测的结果写到pred.txt ，真实值写到golden.txt，用于后续输入conlleval.pl脚本
 
 ## eval
 ```bash
