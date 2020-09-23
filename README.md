@@ -46,7 +46,7 @@ accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
 ```
 
 
-## models说明
+## Models说明
 
 ### Bert only
 
@@ -79,14 +79,14 @@ CRF层可以为最后预测的标签添加一些约束来保证预测的标签�
 
 - test_bert_ner.py : 测试，把模型预测的结果写到pred.txt ，真实值写到golden.txt，用于后续输入conlleval.pl脚本
 
-## eval
+## Eval
 ```bash
 cut -d " " -f1 data/test.txt > word.txt
 paste -d " " word.txt golden.txt pred.txt > output
 perl conlleval.pl < output
 ```
 
-## 结果
+## Results
 
 | model | F1 score | description                          |
 | ----- | -------- | ------------------------------------ |
