@@ -69,6 +69,8 @@ CRF层可以为最后预测的标签添加一些约束来保证预测的标签�
 
 有了这些约束，标签序列预测中非法序列出现的概率将会大大降低。
 
+https://pytorch-crf.readthedocs.io/en/stable/ 
+
 ### BiLSTM+CRF
 （待填坑）
 
