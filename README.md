@@ -63,6 +63,9 @@ pytorch_model.bin、config.json、vocab.txt 下载三个文件，保存到你的
 
 具体方法见文档 https://pytorch-crf.readthedocs.io/ 和issue29
 
+### 文件
+- Bert_crf.py 加上了crf层训练
+
 #### CRF说明
 
 CRF层能从训练数据中获得约束性的规则
@@ -99,5 +102,5 @@ perl conlleval.pl < output
 | ----- | -------- | ------------------------------------ |
 | Bert  | 65.77    | epoch=5,batchsize=64,AdamW,lr=5e-5,bert-base-uncased|
 | Bert  | 81.53    | epoch=4,batchsize=64,AdamW,lr=5e-5,bert-base-cased|
-| Bert-crf  |     | epoch=4,batchsize=64,AdamW,lr=5e-5,bert-base-cased|
+| Bert-crf  |  82.07   | epoch=4,batchsize=64,AdamW,lr=5e-5,bert-base-cased|
 
