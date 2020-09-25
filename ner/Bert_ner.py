@@ -8,7 +8,7 @@ from transformers import BertTokenizer ,BertForTokenClassification ,AdamW
 MAXLEN = 128 -2
 BATCHSIZE = 64
 
-path="/data/yanghan/Bert_related/bert_base_uncased/"
+path="/data/yanghan/Bert_related/bert_base_cased/"
 config_dir=path
 tokenizer=BertTokenizer.from_pretrained(path)
 model=BertForTokenClassification.from_pretrained(path)
@@ -68,7 +68,7 @@ test_loader=DataLoader(test_set,
 
 device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def train_model(net,epoch=5):
+def train_model(net,epoch=4):
     avg_loss=[]
     net.train()
     net.to(device)
@@ -143,8 +143,7 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s:%(levelname)s: %(message)s', level=logging.INFO)
     # fn_model = fn_class()
     pre_net = BertForTokenClassification.from_pretrained(path,num_labels=9)
-    params_dir = 'model/bert_base_model_beta.pkl'
+    params_dir = 'model/bert_base_model_beta2.pkl'
 
     model = train_model(pre_net)
     torch.save(model.state_dict(), params_dir)  # 保存模型参数
-
