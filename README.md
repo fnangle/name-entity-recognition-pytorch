@@ -92,4 +92,6 @@ perl conlleval.pl < output
 
 | model | F1 score | description                          |
 | ----- | -------- | ------------------------------------ |
-| Bert  | 65.77    | epoch=5，batchsize=64,AdamW ,lr=5e-5 |
+| Bert  | 65.77    | epoch=5，batchsize=64,AdamW ,lr=5e-5,bert-base-uncased|
+| Bert  | 81.53    | epoch=4，batchsize=32,AdamW ,lr=5e-5,bert-base-cased|
+
