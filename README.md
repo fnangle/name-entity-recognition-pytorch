@@ -59,7 +59,7 @@ pytorch_model.bin、config.json、vocab.txt 下载三个文件，保存到你的
 
 ### Bert+CRF
 
-使用开源的crf包；https://github.com/kmkurn/pytorch-crf/issues/29
+使用开源的crf包；https://github.com/kmkurn/pytorch-crf/
 
 具体方法见文档 https://pytorch-crf.readthedocs.io/ 和issue29
 
