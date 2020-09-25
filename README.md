@@ -50,7 +50,11 @@ accuracy:  66.67%; precision:  33.33%; recall:  50.00%; FB1:  40.00
 
 ### Bert only
 
-BertForTokenClassification：详见hugging face https://huggingface.co/transformers/model_doc/bert.html#bertfortokenclassification
+BertForTokenClassification：详见huggingface https://huggingface.co/transformers/model_doc/bert.html#bertfortokenclassification
+
+需要下载bert-base-cased模型：
+https://huggingface.co/bert-base-cased#list-files 
+pytorch_model.bin、config.json、vocab.txt 下载三个文件，保存到你的路径中
 
 ### Bert+CRF
 
@@ -93,5 +97,6 @@ perl conlleval.pl < output
 | model | F1 score | description                          |
 | ----- | -------- | ------------------------------------ |
 | Bert  | 65.77    | epoch=5，batchsize=64,AdamW ,lr=5e-5,bert-base-uncased|
-| Bert  | 81.53    | epoch=4，batchsize=32,AdamW ,lr=5e-5,bert-base-cased|
+| Bert  | 81.53    | epoch=4，batchsize=64,AdamW ,lr=5e-5,bert-base-cased|
+| Bert-crf  |     | epoch=4，batchsize=64,AdamW ,lr=5e-5,bert-base-cased|
 
