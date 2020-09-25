@@ -54,11 +54,14 @@ BertForTokenClassification：详见huggingface https://huggingface.co/transforme
 
 需要下载bert-base-cased模型：
 https://huggingface.co/bert-base-cased#list-files 
+
 pytorch_model.bin、config.json、vocab.txt 下载三个文件，保存到你的路径中
 
 ### Bert+CRF
 
-（待填坑。。。）
+使用开源的crf包；https://github.com/kmkurn/pytorch-crf/issues/29
+
+具体方法见文档 https://pytorch-crf.readthedocs.io/ 和issue29
 
 #### CRF说明
 
@@ -96,7 +99,7 @@ perl conlleval.pl < output
 
 | model | F1 score | description                          |
 | ----- | -------- | ------------------------------------ |
-| Bert  | 65.77    | epoch=5，batchsize=64,AdamW ,lr=5e-5,bert-base-uncased|
-| Bert  | 81.53    | epoch=4，batchsize=64,AdamW ,lr=5e-5,bert-base-cased|
-| Bert-crf  |     | epoch=4，batchsize=64,AdamW ,lr=5e-5,bert-base-cased|
+| Bert  | 65.77    | epoch=5,batchsize=64,AdamW,lr=5e-5,bert-base-uncased|
+| Bert  | 81.53    | epoch=4,batchsize=64,AdamW,lr=5e-5,bert-base-cased|
+| Bert-crf  |     | epoch=4,batchsize=64,AdamW,lr=5e-5,bert-base-cased|
 
