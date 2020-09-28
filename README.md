@@ -63,8 +63,6 @@ pytorch_model.bin、config.json、vocab.txt 下载三个文件，保存到你的
 
 具体方法见文档 https://pytorch-crf.readthedocs.io/ 和issue29
 
-### 文件
-- Bert_crf.py 加上了crf层训练
 
 #### CRF说明
 
@@ -88,6 +86,8 @@ CRF层可以为最后预测的标签添加一些约束来保证预测的标签�
 - Bert_ner.py : 主要的程序，用来训练模型. 
 
 - test_bert_ner.py : 测试，把模型预测的结果写到pred.txt ，真实值写到golden.txt，用于后续输入conlleval.pl脚本
+
+- Bert_crf.py 加上了crf层用来训练
 
 ## Eval
 ```bash
